@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔐 Gerador de Senhas</h1>
+            <p>Gere senhas seguras instantaneamente</p>
+        </header>
+
+        <section class="password-section">
+            <label for="password">Sua senha:</label>
+            <div class="password-group">
+                <input type="text" id="password" readonly>
+                <button id="copy-btn" title="Copiar">📋</button>
+                <button id="generate-btn" title="Gerar nova">🔄</button>
+            </div>
+            
+            <div class="strength">
+                <span>Força: <span id="strength-text">Média</span></span>
+                <div class="strength-bar">
+                    <div id="strength-fill"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="options">
+            <h3>Personalize sua senha</h3>
+            
+            
+            <div class="option">
+                <label>Tamanho: <span id="length-display">12</span> caracteres</label>
+                <input type="range" id="length" min="4" max="30" value="12">
+            </div>
+
+            <div class="checkboxes">
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    Letras maiúsculas (A-Z)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    Letras minúsculas (a-z)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    Números (0-9)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="symbols">
+                    Símbolos (!@#$%&*)
+                </label>
+            </div>
+
+            <div class="presets">
+                <button class="preset" data-preset="simple">Simples (8)</button>
+                <button class="preset" data-preset="strong">Forte (16)</button>
+                <button class="preset" data-preset="ultra">Ultra (24)</button>
+            </div>
+        </section>
+
+        <div id="toast" class="toast">Senha copiada! ✅</div>
+    </div>
+<footer style="color: black;">
+    <p>desenvolvido por Giovana Orso</p>
+</footer>
+    <script src="xn.js"></script>
+</body>
+</html>
